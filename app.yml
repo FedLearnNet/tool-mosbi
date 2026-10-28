@@ -1,0 +1,110 @@
+config:
+  hyperparams:
+  - default: '5'
+    description: Number of randomizations for cut-off estimation.
+    maxValue: null
+    minValue: 1.0
+    name: n_randomizations
+    options: []
+    pattern: null
+    type: INTEGER
+  - default: both
+    description: Margin for similarity computation
+    maxValue: null
+    minValue: null
+    name: margin
+    options:
+    - row
+    - column
+    - mean
+    - both
+    pattern: null
+    type: CATEGORICAL
+  - default: Bray-Curtis
+    description: Similarity metric
+    maxValue: null
+    minValue: null
+    name: metric
+    options:
+    - Bray-Curtis
+    - Jaccard
+    - Overlap Coefficient
+    - Fowlkes-Mallows
+    pattern: null
+    type: CATEGORICAL
+  - default: '100'
+    description: Number of points where the cut-off is evaluated
+    maxValue: null
+    minValue: 1.0
+    name: n_steps
+    options: []
+    pattern: null
+    type: INTEGER
+  - default: 'true'
+    description: Compute signal-to-noise ratio if True, else use error_threshold
+    maxValue: null
+    minValue: null
+    name: sn_ratio
+    options: []
+    pattern: null
+    type: BOOLEAN
+  input:
+  - delimiter: null
+    description: TSV file
+    maxValue: null
+    minValue: null
+    name: data
+    required: false
+    shape: null
+    tabularSchema: null
+    hasHeader: true
+    type: CSV
+  output:
+  - delimiter: null
+    description: ''
+    hasHeader: null
+    maxValue: null
+    minValue: null
+    name: adjacency_heatmap
+    required: false
+    shape: null
+    tabularSchema: null
+    type: IMAGE
+  - delimiter: null
+    description: ''
+    hasHeader: null
+    maxValue: null
+    minValue: null
+    name: histograms
+    required: false
+    shape: null
+    tabularSchema: null
+    type: IMAGE
+  - delimiter: null
+    description: ''
+    hasHeader: null
+    maxValue: null
+    minValue: null
+    name: network_by_algorithm
+    required: false
+    shape: null
+    tabularSchema: null
+    type: IMAGE
+  - delimiter: null
+    description: ''
+    hasHeader: null
+    maxValue: null
+    minValue: null
+    name: network_plot
+    required: false
+    shape: null
+    tabularSchema: null
+    type: IMAGE
+info:
+  name: tool-mosbi
+  slug: tool-mosbi
+  type: SELF_LEARNED
+  sourceUrl: https://github.com/FedLearnNet/tool-mosbi
+  shortDescription: Identifies molecular signatures with MoSBi ensemble biclustering
+    and exports biclusters and reports.
+  longDescription: null
