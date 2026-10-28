@@ -101,8 +101,8 @@ config:
     tabularSchema: null
     type: IMAGE
 info:
-  name: tool-mosbi
-  slug: tool-mosbi
+  name: mosbi
+  slug: mosbi
   type: SELF_LEARNED
   sourceUrl: https://github.com/FedLearnNet/tool-mosbi
   shortDescription: Identifies molecular signatures with MoSBi ensemble biclustering

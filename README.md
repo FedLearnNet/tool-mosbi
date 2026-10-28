@@ -1,4 +1,4 @@
-# tool-mosbi
+# mosbi
 
 Identifies molecular signatures with MoSBi ensemble biclustering and exports biclusters and reports.
 
